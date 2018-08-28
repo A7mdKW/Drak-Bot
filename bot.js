@@ -3009,7 +3009,7 @@ j = 1;
 
 
 client.on('message', message => {
-if (message.content.startsWith('-invites')) {
+if (message.content.startsWith('*invites')) {
 let oi = message.mentions.users.first() ? message.mentions.users.first().id : message.author.id ; 
   let img = message.mentions.users.first() ? message.mentions.users.first().username : message.author.username;
   let imagemm = message.mentions.users.first() ? message.mentions.users.first().avatarURL : message.author.avatarURL
