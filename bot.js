@@ -2968,5 +2968,5 @@ Server Count: __${guild.memberCount}__**`)
  
  
  
- 
+
 client.login(process.env.BOT_TOKEN);  //اياكككك تلعب هنا لا تحط توكنك هنا 
