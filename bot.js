@@ -3065,59 +3065,7 @@ client.on('message', message => {
 
 
 
-client.on('message', message => {
- if(message.content.startsWith(prefix + 'hug')) {
-   let args = message.content.split(" ").slice(1);
-    let hug = [
-        "https://78.media.tumblr.com/28e86413485a973ae859a745a7a5382e/tumblr_o1hf0uK2NL1uapp8co1_500.gif",
-        "https://78.media.tumblr.com/18fdf4adcb5ad89f5469a91e860f80ba/tumblr_oltayyHynP1sy5k7wo1_500.gif",
-        "https://78.media.tumblr.com/e790af0168cd80394b7d792dde07407b/tumblr_o76qfcMiFn1sk1rjvo1_500.gif",
-        "https://78.media.tumblr.com/350c512200d6cbb6506774f2cddc9641/tumblr_ooonx9vM691qzxv73o1_500.gif",
-        "https://78.media.tumblr.com/5dfb67d0a674fe5f81950478f5b2d4ed/tumblr_ofd4e2h8O81ub9qlao1_500.gif",
-        "https://78.media.tumblr.com/21f89b12419bda49ce8ee33d50f01f85/tumblr_o5u9l1rBqg1ttmhcxo1_500.gif",
-        "https://78.media.tumblr.com/ebc214f892af851ffd7297e0e6212cdb/tumblr_o2kwkfyzT01uprh6zo1_500.gif",
-        "https://78.media.tumblr.com/5fa89acc3637b84a29c6f528c1727135/tumblr_o3kyyxj5nF1unech7o1_500.gif",
-        "https://78.media.tumblr.com/443c4235cae34242d014e2bb1276810d/tumblr_orldmdZJ2x1vb10byo1_500.gif",
-        "https://78.media.tumblr.com/b8ce553824c59700049256fbc825390b/tumblr_ojf72iRAty1v312ebo1_500.gif",
-        "https://78.media.tumblr.com/2fe074ad467af41a8230b8d9d8e322f1/tumblr_omvj49wYnq1v8tshbo1_500.gif",
-        "https://78.media.tumblr.com/9956a4b53345e4031faccf8174cadb68/tumblr_ozy26yVcBu1ql0375o1_500.gif",
-        "https://78.media.tumblr.com/14f5e0c6ef88280f75017987302a7dad/tumblr_o31a2iJsCw1uprh6zo1_500.gif",
-        "https://78.media.tumblr.com/5e2130af66f9c548059c6452d1b55e03/tumblr_p8zuex4xZo1qzxv73o1_500.gif",
-        "https://i.gifer.com/8WPN.mp4",
-        "https://i.gifer.com/GAMC.gif",
-    ]
-    let hugresult = Math.floor((Math.random() * hug.length));
-    if (!args[0]) {
-        const ghembed = new Discord.RichEmbed()
-        .setColor("RANDOM")
-            .setTitle(`${message.author.username} Sorry to see you alone...`)
-            .setImage('https://78.media.tumblr.com/9d9be702d1dda0559809d920bf1d01d1/tumblr_inline_nrw2mfIFBh1qafrh6_400.gif')
-        message.channel.send({
-            embed: ghembed
-        })
-        return;
-     }
-    if (!message.mentions.members.first().user.username === message.isMentioned(message.author)) {
-        const hembed = new Discord.RichEmbed()
-        .setColor("RANDOM")
-            .setTitle(`${message.mentions.members.first().user.username} you have been hugged by ${message.author.username}`)
-            .setImage(hug[hugresult])
-        message.channel.send({
-            embed: hembed
-        })
-        return;
-    }
-    const ghembed = new Discord.RichEmbed()
-        .setColor(RANDOM)
-        .setTitle(`${message.author.username} Sorry to see you alone...`)
-        .setImage('https://78.media.tumblr.com/9d9be702d1dda0559809d920bf1d01d1/tumblr_inline_nrw2mfIFBh1qafrh6_400.gif')
-    message.channel.send({
-        embed: ghembed
-    })
-}
-});
-///end
 
- 
+
 
 client.login(process.env.BOT_TOKEN);  //اياكككك تلعب هنا لا تحط توكنك هنا 
