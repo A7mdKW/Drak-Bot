@@ -3061,7 +3061,7 @@ Server Count: __${guild.memberCount}__**`)
 message.channel.sendEmbed(cat);
     }
 });
- 
 
 
-client.login(process.env.BOT_TOKEN);
+
+client.login(process.env.BOT_TOKEN); 
