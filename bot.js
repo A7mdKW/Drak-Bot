@@ -2996,12 +2996,26 @@ Server Count: __${guild.memberCount}__**`)
  
  
  
+ client.on('message', msg => {
+  if(msg.content === 'هلا')
+              setTimeout(function() {  
+msg.reply('هلا حبي')
+              }, 10000)
+});
  
  
  
  
- 
- 
+ client.on('presenceUpdate', (oldMember, newMember) => {
+     
+    if (newMember.presence.game != null){
+        if (newMember.presence.game.streaming){
+            var channel = client.channels.get("483369627368423435")
+                    channel.send(`**${newMember.user.tag} is now streaming at** ${newMember.presence.game.url} `);
+                
+        }
+    }
+});
  
  
  
