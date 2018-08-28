@@ -3018,6 +3018,20 @@ msg.reply('هلا حبي')
 });
  
  
+
+
+client.on('message', message => {
+            if (message.content.startsWith(prefix + "botinfo")) {
+     let embed = new Discord.RichEmbed()
+.addField(' عدد السيرفرات التي بها',`[${client.guilds.size}]  `)
+.addField(' عدد الاعضاء ',` [${client.users.size}] `)
+.addField('الغرف ',`[${client.channels.size}]`) 
+.addField(' البنق ',`[${Date.now() - message.createdTimestamp}]`) 
+.addField(' ItzDrak_')
+.setColor('#7d2dbe')
+  message.channel.sendEmbed(embed);
+    }
+});
  
  
  
