@@ -3016,6 +3016,25 @@ message.channel.send(alpha);
 };
   });
 
+
+
+
+client.on('message', async message =>{
+
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+  let sicon = message.author.displayAvatarURL;
+  if(cmd === `-myid`) {
+      var bots = new Discord.RichEmbed()
+
+      .setDescription(`** Your id: ${message.author.id}  **`)
+      .setColor('RANDOM')
+      message.channel.send(bots);
+  }
+});
+
+
  
 
 client.login(process.env.BOT_TOKEN);  //اياكككك تلعب هنا لا تحط توكنك هنا 
