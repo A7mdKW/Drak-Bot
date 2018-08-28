@@ -3215,4 +3215,13 @@ ${prefix}صراحه ⇏ game صراحه
    }); 
 
 
+
+ client.on('message', msg => {
+  if (msg.content === '-help') {
+    msg.reply(':envelope: | تم ارسال الرساله في الخاص');
+  }
+});
+
+
+
 client.login(process.env.BOT_TOKEN);  //اياكككك تلعب هنا لا تحط توكنك هنا 
