@@ -3205,6 +3205,8 @@ ${prefix}mutechannel ❄ لتقفيل الروم
 ${prefix}unmutechannel ❄ لألغاء قفل الروم
 ${prefix} خواطر ❄ game خواطر
 ${prefix}صراحه ❄ game صراحه
+***Note*** : Bot In Developing.
+
 `)
    message.channel.sendEmbed(embed)
     
