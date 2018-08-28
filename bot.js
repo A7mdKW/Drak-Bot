@@ -2998,16 +2998,7 @@ Server Count: __${guild.memberCount}__**`)
     .setThumbnail(heg.avatarURL);
     message.channel.send(id)
 }       });
- 
 
- 
- 
- 
- 
- 
- 
- 
- 
  
  
  var cats = [
@@ -3061,7 +3052,6 @@ Server Count: __${guild.memberCount}__**`)
 message.channel.sendEmbed(cat);
     }
 });
-
 
 
 
