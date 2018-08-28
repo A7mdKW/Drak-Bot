@@ -1380,7 +1380,17 @@ client.on('message' , message => {
  
  
  
- 
+ client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+         client.on('message', message => {
+            if (message.content === 'هلا') {
+              message.channel.send('هلا حبي :heart: ');
+    message.reply(message.author.avatarURL); 
+               
+
+            }
+}); 
  
  
  
@@ -1961,65 +1971,6 @@ if(ra3d.content.startsWith(prefix + 'color')) {
  
  
 
-	  
-	  
-	  
-	  
-client.on('message', function(message) {
-	const myID = "417232164845781012";
-    let args = message.content.split(" ").slice(1).join(" ");
-    if(message.content.startsWith(prefix + "setname")) {
-		        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setUsername(args);
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith(prefix + "stream")) {
-		        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setGame(args , 'https://twitch.tv/6xlez1');
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith(prefix + "playing")) {
-				        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setGame(args);
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith(prefix + "listen")) {
-				        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setActivity(args, {type:'LISTENING'});
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith(prefix + "watch")) {
-				        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setActivity(args, {type:'WATCHING'});
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith(prefix + "setavatar")) {
-				        if(message.author.id !== myID) return;
-        client.user.setAvatar(args);
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-                if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    }
-});
- 
- 
  
 
  	client.on('message', async message =>{
@@ -2426,7 +2377,7 @@ client.on('message', message => {
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
 			      .addField('``My Prefix``' , `[ - ]` , true)
 			      .addField('``My Language``' , `[ Java Script ]` , true)
-			      .setFooter('By | Elmusaui_GK and SpeedMC')
+			      .setFooter('By | ItzDrak_ Drak . Bot')
     })
 }
 });
@@ -2995,14 +2946,7 @@ Server Count: __${guild.memberCount}__**`)
  
  
  
- 
- client.on('message', msg => {
-  if(msg.content === 'هلا')
-              setTimeout(function() {  
-msg.reply('هلا حبي')
-              }, 10000)
-});
- 
+
  
  
  
@@ -3020,18 +2964,6 @@ msg.reply('هلا حبي')
  
 
 
-client.on('message', message => {
-            if (message.content.startsWith(prefix + "botinfo")) {
-     let embed = new Discord.RichEmbed()
-.addField(' عدد السيرفرات التي بها',`[${client.guilds.size}]  `)
-.addField(' عدد الاعضاء ',` [${client.users.size}] `)
-.addField('الغرف ',`[${client.channels.size}]`) 
-.addField(' البنق ',`[${Date.now() - message.createdTimestamp}]`) 
-.addField(' ItzDrak_')
-.setColor('#7d2dbe')
-  message.channel.sendEmbed(embed);
-    }
-});
  
  
  
