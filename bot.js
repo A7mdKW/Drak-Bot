@@ -3054,52 +3054,6 @@ message.channel.sendEmbed(cat);
     }
 });
  
- 
-   const gif = require("gif-search")
-client.on('message', message => {
-    var prefix ="-"
-    if(message.content.startsWith(prefix + 'gif')) {
-console.log('[Gif Search] Developed By Ghost')
-        if(message.channel.type === 'dm') return message.channel.send('Only For Servers')
-        let args = message.content.split(' ').slice(1).join(' ')
-            if (!args) return message.reply('يجب كتابة أسم الصورة')
-    gif.query(args).then(gifUrl => {
-        message.channel.send({
-            files: [{
-                attachment: gifUrl,
-                name: "search.gif"
-            }]
-        });
-    });
-}
-});
- 
- 
- 
-
-
-
-client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'welcome');
-    let memberavatar = member.user.avatarURL
-      if (!channel) return;
-    let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(memberavatar)
-        .addField('🎽 | name :  ',`${member}`)
-        .addField('📢 | نورت السيرفر يا قلبي' , `Welcome to the server, ${member}`)
-        .addField('🆔 | user :', "**[" + `${member.id}` + "]**" )
-                .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
-               
-                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
-                     
-                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
-                                       
-     .setFooter(`${member.guild.name}`)
-        .setTimestamp()
-   
-      channel.sendEmbed(embed);
-    });
 
 
 
