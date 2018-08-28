@@ -3112,7 +3112,50 @@ var prefix = "-";
 
 
 
-
+client.on("message", message => {
+    var prefix = "-";
+ if (message.content === ">help") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("#000000") 
+      .setDescription(`
+      
+                    Snow-Bot Commands
+Please Choose:
+             
+${prefix}ban ⇏  خاصية الباند
+${prefix}bc ⇏ خاصية البرودكاست
+${prefix}kick ⇏ خاصية الطرد
+${prefix}clear ⇏  خاصية مسح الشات
+${prefix}bans ⇏  لمعرفة عدد المبندين في سيرفر
+${prefix}mute ⇏ لاعطاء شخص ميوت
+${prefix}ping ⇏ لمعرفة بنق البوت
+${prefix}bot ⇏ لمعرفة معلومات البوت
+${prefix}info ⇏ لمعرفة معلومات البوت
+${prefix}server ⇏ لمعرفة معلومات السيرفر
+${prefix}roles ⇏ لعرض كل رتب السيرفر
+${prefix}users ⇏ Bot users number
+>top ⇏ invites لمعرفة معلومات 
+${prefix}inv ⇏ لدعوة البوت لسيرفرك
+${prefix}cc ⇏ لصنع الوان
+${prefix}لو خيروك ⇏ game لو خيروك 
+${prefix}قوانين ⇏ rules قوانين
+${prefix}id ⇏ لمعرفة ايدي حقك
+${prefix}warn ⇏ لتحضير شخص ما
+${prefix}rules ⇏ rules قوانين
+${prefix}invites ⇏ check your invites
+${prefix}user ⇏ informations about you account
+${prefix}role ⇏ give role
+${prefix}rerole ⇏ remove role
+${prefix}sug ⇏ to add suggest !
+${prefix}giveaway ⇏ to create a giveaway
+${prefix} خواطر ⇏ game خواطر
+${prefix}صراحه ⇏ game صراحه
+***Note*** : Bot In Developing.
+`)
+   message.channel.sendEmbed(embed)
+    
+   }
+   }); 
 
 
 client.login(process.env.BOT_TOKEN);  //اياكككك تلعب هنا لا تحط توكنك هنا 
