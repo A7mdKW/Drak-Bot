@@ -544,17 +544,6 @@ client.on('message', message => {
 });
  
  
- client.on('message', message => {
-	 if (message.content.starsWwith("-foxmido")) {
-	let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
-.addField('ذا اخيس واحد')
-.setColor('#7d2dbe')
-  message.channel.sendEmbed(embed);
-    }
-});	 
-
-
 
 client.on('message', message => {
     var prefix = "-"
