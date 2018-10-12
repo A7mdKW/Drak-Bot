@@ -12,7 +12,6 @@ const prefix = '+'
 const moment = require('moment');
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setGame('#-MRC ','https://www.twitch.tv/A7mdkw');
    client.user.setStatus("DND")
 });
    
